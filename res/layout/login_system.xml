@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@drawable/login"
+	>
+	<TableLayout
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:gravity="center_vertical"
+	android:stretchColumns="0,3">
+	<!-- 列的宽度由该列所有行中最宽的一个单元格决定.不过表格布局可以通过shrinkColumns和 stretchColumns两个属性来标记某些列可以收缩或可以拉伸. 
+	如果标记为可以收缩，列宽可以收缩以使表格适合容器的大小。如果标记为可以拉伸， 列宽可以拉伸以占用多余的空间。
+	表格的总宽度由其父容器决定. 记住列可以同时具有可拉伸和可收缩属性。最后，你还可以通过设置collapseColumns属性来隐藏列。 -->
+		<TableRow>
+		    <TextView/>
+		    <TextView
+		        android:text="@string/userName"
+		        android:id="@+id/userNameTextView"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textColor="#000"/>
+		    <EditText 
+		        android:text=""
+		        android:id="@+id/userEditText"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:hint="@string/nameHint"/>
+		    <TextView/>
+		</TableRow>
+		
+		<TableRow>
+		    <TextView/>
+		    <TextView 
+		        android:text="@string/userPwd"
+		        android:id="@+id/pwdTextView"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textColor="#000"/>
+		    <EditText 
+		        android:text=""
+		        android:id="@+id/pwdEditText"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:password="true"
+		        android:hint="@string/pwdHint"/>
+		    <TextView/>
+		</TableRow>
+		
+		<TableRow
+		    android:gravity="right">
+		    <TextView/>
+		    <Button 
+		        android:text="@string/cancel"
+		        android:id="@+id/cancelButton"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"/>
+		    <Button 
+		        android:text="@string/login"
+		        android:id="@+id/loginButton"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"/>
+		    <TextView/>
+		</TableRow>
+	</TableLayout>
+</LinearLayout>
